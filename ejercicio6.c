@@ -18,7 +18,7 @@ void CargarDatos(TablaHash Vacunados){
     int i, CodHash;
     bool NomCorrecto =false;
     Datos = calloc(60,sizeof(char));
-    printf("(La fecha de vacunacion es desde el año 2020 hasta 2023)\n");
+    printf("(La fecha de vacunacion es desde el aÃ±o 2020 hasta 2023)\n");
     printf("Ingrese la fecha de vacunacion con el formato dd/mm/yyyy:\n");
     gets(Fecha);
     fflush(stdin);
@@ -28,7 +28,7 @@ void CargarDatos(TablaHash Vacunados){
 
     while(CodHash == -1){
         printf("Fecha Invalida\n");
-        printf("(La fecha de vacunacion es desde el año 2020 hasta 2023)\n");
+        printf("(La fecha de vacunacion es desde el aÃ±o 2020 hasta 2023)\n");
         printf("Ingrese la fecha de vacunacion con el formato dd/mm/yyyy:\n");
         gets(Fecha);
         fflush(stdin);
@@ -55,7 +55,6 @@ void CargarDatos(TablaHash Vacunados){
             DNIVal = strtok(NULL, s);
             if(strcmp(DNI, DNIVal) == 0){
                 printf("La persona con el DNI ingresado ya fue cargada para esta fecha\n");
-                system("pause");
                 return;
             }
         }
@@ -106,9 +105,7 @@ void CargarDatos(TablaHash Vacunados){
         P = th_recuperar(Vacunados, X->clave);
         l_agregar(P->valor,X);
     }
-    system("cls");
     printf("Datos cargados correctamente\n");
-    system("pause");
 }
 
 void BuscarVacunadosPorFecha(TablaHash Vacunados){
@@ -120,7 +117,7 @@ void BuscarVacunadosPorFecha(TablaHash Vacunados){
     Fe = calloc(15,sizeof(char));
     DNI = calloc(15,sizeof(char));
     NomYApe = calloc(30,sizeof(char));
-    printf("(La fecha de vacunacion es desde el año 2020 hasta 2023)\n");
+    printf("(La fecha de vacunacion es desde el aÃ±o 2020 hasta 2023)\n");
     printf("Ingrese la fecha de vacunacion con el formato dd/mm/yyyy:\n");
     gets(Fecha);
     fflush(stdin);
@@ -128,7 +125,7 @@ void BuscarVacunadosPorFecha(TablaHash Vacunados){
     Codigo = ValidarFecha(Fecha);
     while(Codigo == -1){
         printf("Fecha Invalida.\n");
-        printf("(La fecha de vacunacion es desde el año 2020 hasta 2023)\n");
+        printf("(La fecha de vacunacion es desde el aÃ±o 2020 hasta 2023)\n");
         printf("Ingrese la fecha de vacunacion con el formato dd/mm/yyyy:\n");
         gets(Fecha);
         fflush(stdin);
@@ -160,6 +157,5 @@ void BuscarVacunadosPorFecha(TablaHash Vacunados){
         }
     }
     printf("--------------------------------------\n");
-    system("pause");
 
 }
