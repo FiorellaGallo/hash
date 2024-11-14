@@ -34,21 +34,16 @@ int main (){
             fflush(stdin);
         if(tecla >= '0' && tecla <= '3'){
             if(tecla == '1'){
-                system("cls");
                 CargarDatos(Vacunados);
             }else if(tecla == '2'){
-                system("cls");
                 BuscarVacunadosPorFecha(Vacunados);
 
             }else if(tecla == '3'){
-                system("cls");
                 th_mostrar(Vacunados);
-                system("pause");
             }else if(tecla == '0'){MENU = false;}
         }
         tecla = ' ';
         fflush(stdin);
-        system("cls");
     }
 
     return 0;
